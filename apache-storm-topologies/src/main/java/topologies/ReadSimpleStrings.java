@@ -1,6 +1,6 @@
 package topologies;
 
-import functions.SplitTextFunc;
+import functions.SplitText;
 import org.apache.storm.Config;
 import org.apache.storm.LocalCluster;
 import org.apache.storm.StormSubmitter;
@@ -9,12 +9,14 @@ import org.apache.storm.trident.operation.builtin.Debug;
 import org.apache.storm.tuple.Fields;
 import spouts.TextSpout;
 
-public class TridentExample {
+public class ReadSimpleStrings {
     public static void  main(String[] args) throws Exception {
         TridentTopology topology = new TridentTopology();
         topology.newStream("lines", new TextSpout())
-                .each(new Fields("line"), new SplitTextFunc(), new Fields("words_split"))
-                .each(new Fields("words_split"), new Debug());
+                .each(new Fields("line"), new SplitText(), new Fields("words_split"))
+                .each(new Fields("words_split"), new Debug(
+
+                ));
 
         Config config = new Config();
         config.setDebug(true);

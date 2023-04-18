@@ -11,7 +11,7 @@ import java.sql.Timestamp;
 import java.util.Map;
 import java.util.Random;
 
-public class YfSpout extends BaseRichSpout {
+public class Spout extends BaseRichSpout {
     private SpoutOutputCollector collector;
 
     @Override

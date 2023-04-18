@@ -21,9 +21,9 @@ public class TextSpout extends BaseRichSpout {
     public void nextTuple() {
         try {
             System.out.println("Spout emitting");
-            collector.emit(new Values("Hello this is some text!!"));
-            collector.emit(new Values("Let's emit more text"));
-            collector.emit(new Values("This should be enough now"));
+            collector.emit(new Values("Hello World!"));
+            collector.emit(new Values("Olá Mundo!"));
+            collector.emit(new Values(""));
             collector.emit(new Values("Another string to read and collect"));
 
         } catch (Exception e) {

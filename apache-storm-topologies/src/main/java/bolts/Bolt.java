@@ -11,7 +11,7 @@ import org.apache.storm.tuple.Values;
 import java.io.PrintWriter;
 import java.util.Map;
 
-public class YfBolt extends BaseBasicBolt {
+public class Bolt extends BaseBasicBolt {
     private PrintWriter writer;
 
     @Override

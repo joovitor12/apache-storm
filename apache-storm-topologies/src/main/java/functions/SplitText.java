@@ -5,10 +5,7 @@ import org.apache.storm.trident.operation.TridentCollector;
 import org.apache.storm.trident.tuple.TridentTuple;
 import org.apache.storm.tuple.Values;
 
-import java.util.List;
-import java.util.Vector;
-
-public class SplitTextFunc extends BaseFunction {
+public class SplitText extends BaseFunction {
 
     @Override
     public void execute(TridentTuple tuple, TridentCollector collector) {
